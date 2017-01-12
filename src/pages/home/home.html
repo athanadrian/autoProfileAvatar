@@ -1,0 +1,30 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            Auto ProfileAvatar
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-card>
+        <ion-item>
+            <ion-avatar>
+                <img [src]="profileAvatar">
+            </ion-avatar>
+        </ion-item>
+        <ion-card-content>
+            <ion-list no-lines>
+                <ion-item>
+                    <ion-label floating>Email</ion-label>
+                    <ion-input [(ngModel)]="email" (change)="emailChanged()" type="email"></ion-input>
+                </ion-item>
+                <ion-item>
+                    <ion-label floating>Password</ion-label>
+                    <ion-input [(ngModel)]="password" type="password"></ion-input>
+                </ion-item>
+            </ion-list>
+        </ion-card-content>
+    </ion-card>
+    <button ion-button icon-right outline color="light">NEXT<ion-icon name="arrow-forward"></ion-icon></button>
+</ion-content>
